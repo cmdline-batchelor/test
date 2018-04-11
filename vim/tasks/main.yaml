@@ -6,7 +6,10 @@
       - curl
       - git
       - ctags
+      - cmake
       - screen
+      - python-devel
+      - centos-release-scl
     state: installed
 
 - name: copy vimrc 
@@ -19,6 +22,7 @@
     path:
       - ~/.vim/autoload
       - ~/.vim/bundle
+      - ~/ycm_build 
     state: directory
 
 - name: copy pathogen.vim
@@ -37,12 +41,41 @@
   - { name: "Raimondi", dest: "delimitMate" }
   - { name: "vim-syntastic", dest: "syntastic" }
   - { name: "vim-airline", dest: "vim-airline" }
+  - { name: "Valloric", dest: "YouCompleteMe" }
+
+- name: add vim 8 repo 
+  become: yes
+  yum_repository:
+    name: vim8 
+    mirrorlist: 
+    description: vim repo
+    enabled: yes 
+
+- name: update vi to 8
+  yum:
+    pkg: vim
+    state: latest
+
+- name: start ycm setup, enable scl repo
+  become: yes
+  yum_repository:
+    name: rhel-server-rhscl-7-rpms
+    mirrorlist: http://mirror.centos.org/centos/7/sclo/x86_64/rh/
+    description: repo 
+    enabled: yes 
+
+- name: install devtoolset-6
+  yum:
+    pkg: devtoolset-6
+    state: installed 
+
+- name: enable devtoolset-6
+  shell: "scl enable devtoolset-6 bash"
 
 - name: get plugins 
   shell: ls ~/.vim/bundle
   register: plugins
 
 - debug: 
-   var: plugins.stdout_lines
-
-
+    var: plugins.stdout_lines
+...
