@@ -1,0 +1,4 @@
+---
+- hosts: rem
+  roles: 
+    - role: vim

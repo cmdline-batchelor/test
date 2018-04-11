@@ -1,0 +1,37 @@
+---
+- name: install packages
+  become: yes 
+  yum: 
+    pkg: 
+      - curl
+      - git
+      - ctags
+    state: installed
+
+- name: copy vimrc 
+  copy:
+    src: .vimrc
+    dest: ~/.vimrc
+
+- name: create plugin dirs
+  file: 
+    path:
+      - ~/.vim/autoload
+      - ~/.vim/bundle
+    state: directory
+
+- name: copy pathogen.vim
+  copy:
+    src: pathogen.vim
+    dest: ~/.vim/autoload
+
+- name: install vi plugins
+  git:
+    repo: "{{ item.name }}"
+    dest: "~/.vim/bundle/{{ item.dest }}"
+  with_items: 
+  - { name: "https://github.com/scrooloose/nerdtree.git", dest: "nerdtree" }
+  - { name: "https://github.com/Raimondi/delimitMate.git", dest: "vim/delimitMate" }
+  - { name: "https://github.com/vim-syntastic/syntastic.git", dest: "syntastic" }
+  - { name: "https://github.com/majutsushi/tagbar.git", dest: "tagbar" }
+  - { name: "https://github.com/vim-airline/vim-airline.git", dest: "vim-airline" }
