@@ -35,12 +35,19 @@ Installs and configures the following plugins using pathogen, No further setup r
 
 you shouldn't require further setup but for customisation checkout plugin sources:
 [pathogen](https://github.com/tpope/vim-pathogen)
+
 [youcompletemhttps://github.com/tpope/vim-pathogene](https://github.com/Valloric/YouCompleteMe)
+
 [vim-airline](https://github.com/vim-syntastic/syntastic)
+
 [syntastic](https://github.com/vim-airline/vim-airline)
+
 [tagbar](https://github.com/majutsushi/tagbar)
+
 [nerdtree](https://github.com/scrooloose/nerdtree)
+
 [fzf](https://github.com/junegunn/fzfe)
+
 [delimitMate](https://github.com/Raimondi/delimitMate)
 
 ## image
