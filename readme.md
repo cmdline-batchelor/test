@@ -1,6 +1,6 @@
 # vi-onysus
 
-- vim juiced up, plugin party blessed by dionysus to beget his insane son vionysus
+- vim juiced up, plugin party blessed by Dionysus to beget his insane son Vionysus
 - uses ansible for a standard vim ide setup, only for centos/rhel
 
 ## preqs:
