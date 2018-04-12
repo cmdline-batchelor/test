@@ -9,8 +9,8 @@
       - cmake
       - screen
       - python-devel
-      - devtoolset-6
       - centos-release-scl
+      - devtoolset-6      
     state: installed
 
 - name: enable devtoolset-6 for ycm
