@@ -34,3 +34,5 @@ Installs and configures the following plugins, No further setup required:
 ## links
 
 you shouldn't require further setup but for customisation checkout plugin sources:
+
+[[test/vi.PNG]]
