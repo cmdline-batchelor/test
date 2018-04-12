@@ -1,5 +1,8 @@
 #!/bin/bash
- 
-  curl -L https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo -o /etc/yum.repo
 
-  sudo yum update vim* -y 
+   cd ~/.vim/bundle/YouCompleteMe 
+   git submodule update --init --recursive
+
+   cd ~/ycm_build 
+   cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp && 
+   cmake --build . --target ycm_core --config Release

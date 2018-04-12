@@ -52,6 +52,9 @@
     pkg: vim
     state: latest
 
+- name: setup youCompleteMe
+  script: ycm.sh
+
 - name: get plugins 
   shell: ls ~/.vim/bundle
   register: plugins
