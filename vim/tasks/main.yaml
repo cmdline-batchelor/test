@@ -10,8 +10,11 @@
       - screen
       - python-devel
       - centos-release-scl-rh
-      - devtoolset-6
     state: installed
+
+- name: add repo for devtoolset-6
+  become: yes
+  shell: "yum-config-manager --enable rhel-server-rhscl-7-rpms"
 
 - name: install devtoolset-6
   become: yes
