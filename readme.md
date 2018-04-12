@@ -1,6 +1,6 @@
 ![title](https://github.com/cmdline-batchelor/test/blob/master/image.png)
 
-BEHOLD VIONYSUS
+## BEHOLD VIONYSUS
 
 - vim juiced, plugin party blessed by Dionysus to beget his insane son... Vionysus!!
 - uses ansible for a standard vim ide setup, only for centos/rhel
