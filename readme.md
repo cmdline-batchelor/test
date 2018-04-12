@@ -9,7 +9,7 @@
 
 - git clone this repo
 - passwordless sudo set 
-- install ansible `yum install -y epel-release ansible`
+- install ansible `sudo yum install -y epel-release ansible`
 - add host to ansible hosts: `sudo vi /etc/ansible/hosts`
 - copy keys to remote/local `ssh-copy-id -i ~/.ssh/key.pub <user>@<hostname>`
 
