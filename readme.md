@@ -21,7 +21,7 @@
 
 `ansible-playbook playVim.yaml`
 
-## plugins
+## plugins:
 
 Installs and configures the following plugins using pathogen, No further setup required:
 - fzf - slick fuzzy word finder
@@ -33,7 +33,7 @@ Installs and configures the following plugins using pathogen, No further setup r
 - Delimitmate - closes parenthesis
 
 
-## links
+## links:
 
 you shouldn't require further setup but for customisation checkout plugin sources:
 
