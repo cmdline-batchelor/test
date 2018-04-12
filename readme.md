@@ -26,6 +26,6 @@ Installs and configures the following plugins:
 - Tagbar - function gotos/list
 - Nerdtree - treeview of files
 
-# links
+## links
 
 you shouldn't require further setup but for customisation checkout plugin sources:
