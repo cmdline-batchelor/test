@@ -15,7 +15,7 @@
 
 ## run:
 
-`cd <path to this repo>/ansible`
+`cd <path to this repo>`
 
 `ansible-playbook playVim.yaml`
 
