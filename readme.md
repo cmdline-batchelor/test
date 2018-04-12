@@ -45,7 +45,7 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
 ## nerdtree, vim-airline, tagBar, youCompleteMe, syntastic in bash
-![title](https://github.com/cmdline-batchelor/test/blob/master/vim1.PNG)
+![title](https://github.com/cmdline-batchelor/test/blob/master/vim3.PNG)
 
 ## yaml
 ![title](https://github.com/cmdline-batchelor/test/blob/master/yaml.PNG)
