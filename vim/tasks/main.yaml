@@ -9,12 +9,15 @@
       - cmake
       - screen
       - python-devel
-      - centos-release-scl
-      - devtoolset-6      
+      - centos-release-scl-rh
+      - devtoolset-6
     state: installed
 
-- name: enable devtoolset-6 for ycm
-  shell: "scl enable devtoolset-6 bash"
+- name: install devtoolset-6
+  become: yes
+  yum:
+    pkg: devtoolset-6
+    state: installed
 
 - name: copy vimrc 
   copy:
@@ -23,35 +26,36 @@
 
 - name: create plugin dirs
   file: 
-    path:
-      - ~/.vim/autoload
-      - ~/.vim/bundle
-      - ~/ycm_build 
+    path: "{{item}}"
     state: directory
+  with_items:
+  - ~/.vim/autoload
+  - ~/.vim/bundle
+  - ~/ycm_build 
 
 - name: copy pathogen.vim
   copy:
     src: pathogen.vim
     dest: ~/.vim/autoload
 
-- name: install vi plugins
-  git:
-    repo: "https://github.com/{{item.name}}/{{item.dest}}.git"
-    dest: "~/.vim/bundle/{{item.dest}}"
-  with_items: 
-  - { name: "junegunn", dest: "fzf" }
-  - { name: "majutsushi", dest: "tagbar" }
-  - { name: "scrooloose", dest: "nerdtree" }
-  - { name: "Raimondi", dest: "delimitMate" }
-  - { name: "vim-syntastic", dest: "syntastic" }
-  - { name: "vim-airline", dest: "vim-airline" }
-  - { name: "Valloric", dest: "YouCompleteMe" }
+#- name: install vi plugins
+#  git:
+#    repo: "https://github.com/{{item.name}}/{{item.dest}}.git"
+#    dest: "~/.vim/bundle/{{item.dest}}"
+#  with_items: 
+#  - { name: "junegunn", dest: "fzf" }
+#  - { name: "majutsushi", dest: "tagbar" }
+#  - { name: "scrooloose", dest: "nerdtree" }
+#  - { name: "Raimondi", dest: "delimitMate" }
+#  - { name: "vim-syntastic", dest: "syntastic" }
+#  - { name: "vim-airline", dest: "vim-airline" }
+#  - { name: "Valloric", dest: "YouCompleteMe" }
 
 - name: update vi to 8
   script: getVim8.sh
 
-- name: setup youCompleteMe
-  script: ycm.sh
+- name: start ycm setup
+  script: ycm.sh 
 
 - name: get plugins 
   shell: ls ~/.vim/bundle
