@@ -143,4 +143,3 @@ you shouldn't require further setup but for customisation checkout plugin source
 
 ## fzf:
 ![title](https://github.com/cmdline-batchelor/test/blob/master/fzf.PNG)
-
