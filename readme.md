@@ -39,7 +39,7 @@ to add more plugins:
 - `cd <path to this repo>`
 - `vi vim/tasks/main.yaml`
 
- add a new line to the repo dict example:
+ add a new line to the repo dict, example:
  - given that the plugin repo is: https://github.com/ `someName` / `repo`
  
  insert as below: 
