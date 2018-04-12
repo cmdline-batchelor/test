@@ -48,9 +48,7 @@
   - { name: "Valloric", dest: "YouCompleteMe" }
 
 - name: update vi to 8
-  yum:
-    pkg: vim
-    state: latest
+  script: getVim8.sh
 
 - name: setup youCompleteMe
   script: ycm.sh
