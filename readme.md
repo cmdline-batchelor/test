@@ -44,5 +44,12 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
-## image
+## nerdtree, vim-airline, tagBar, youCompleteMe bash script
 ![title](https://github.com/cmdline-batchelor/test/blob/master/vi.PNG)
+
+## yaml
+![title](https://github.com/cmdline-batchelor/test/blob/master/yaml.PNG)
+
+## fzf
+![title](https://github.com/cmdline-batchelor/test/blob/master/image.png)
+
