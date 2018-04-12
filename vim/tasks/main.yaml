@@ -38,18 +38,18 @@
     src: pathogen.vim
     dest: ~/.vim/autoload
 
-#- name: install vi plugins
-#  git:
-#    repo: "https://github.com/{{item.name}}/{{item.dest}}.git"
-#    dest: "~/.vim/bundle/{{item.dest}}"
-#  with_items: 
-#  - { name: "junegunn", dest: "fzf" }
-#  - { name: "majutsushi", dest: "tagbar" }
-#  - { name: "scrooloose", dest: "nerdtree" }
-#  - { name: "Raimondi", dest: "delimitMate" }
-#  - { name: "vim-syntastic", dest: "syntastic" }
-#  - { name: "vim-airline", dest: "vim-airline" }
-#  - { name: "Valloric", dest: "YouCompleteMe" }
+- name: install vi plugins
+  git:
+    repo: "https://github.com/{{item.name}}/{{item.dest}}.git"
+    dest: "~/.vim/bundle/{{item.dest}}"
+  with_items: 
+  - { name: "junegunn", dest: "fzf" }
+  - { name: "majutsushi", dest: "tagbar" }
+  - { name: "scrooloose", dest: "nerdtree" }
+  - { name: "Raimondi", dest: "delimitMate" }
+  - { name: "vim-syntastic", dest: "syntastic" }
+  - { name: "vim-airline", dest: "vim-airline" }
+  - { name: "Valloric", dest: "YouCompleteMe" }
 
 - name: update vi to 8
   script: getVim8.sh
