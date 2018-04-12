@@ -27,7 +27,6 @@ Installs and configures the following plugins using pathogen, No further setup r
 - YouCompleteMe - autocomplete, gotos
 - Vim-airline - vim status bar
 - Tagbar - function gotos/list
-
 - Nerdtree - treeview of files
 - Delimitmate - closes parenthesis
 
@@ -38,9 +37,9 @@ you shouldn't require further setup but for customisation checkout plugin source
 
 - [fzf](https://github.com/junegunn/fzfe)
 - [tagbar](https://github.com/majutsushi/tagbar)
-- [pathogen](https://github.com/tpope/vim-pathogen)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [syntastic](https://github.com/vim-airline/vim-airline)
+- [pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-airline](https://github.com/vim-syntastic/syntastic)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
