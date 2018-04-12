@@ -17,8 +17,7 @@ uses ansible for a standard vim ide setup, only for centos/rhel
 
 ## plugins
 
-Installs and configures the following plugins:
-- No further setup required, complete YouCompleteMe installation
+Installs and configures the following plugins, No further setup required:
 - YouCompleteMe - autocomplete
 - Syntastic - syntax check
 - Delimitmate - closes parenthesis
