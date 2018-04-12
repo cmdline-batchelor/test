@@ -16,6 +16,7 @@
 ## run:
 
 `cd <path to this repo>/ansible`
+
 `ansible-playbook playVim.yaml`
 
 ## plugins
