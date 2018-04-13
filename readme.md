@@ -1,4 +1,4 @@
-![title](https://github.com/cmdline-batchelor/test/blob/master/image.png)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/image.png)
 
 ## BEHOLD VIONYSUS
 
@@ -70,11 +70,11 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
 
 ## nerdtree, vim-airline, tagBar, youCompleteMe, syntastic in bash:
-![title](https://github.com/cmdline-batchelor/test/blob/master/vim3.PNG)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/vim3.PNG)
 
 ## yaml:
-![title](https://github.com/cmdline-batchelor/test/blob/master/yaml.PNG)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/yaml.PNG)
 
 ## fzf:
-![title](https://github.com/cmdline-batchelor/test/blob/master/fzf.PNG)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/fzf.PNG)
 
