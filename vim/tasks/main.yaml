@@ -3,8 +3,10 @@
   become: yes 
   yum: 
     pkg: 
-      - curl
+      - epel-release 
       - git
+      - curl
+      - nodejs
       - ctags
       - cmake
       - screen
@@ -48,6 +50,7 @@
   with_items: 
   - { name: "junegunn", dest: "fzf" }
   - { name: "majutsushi", dest: "tagbar" }
+  - { name: "ternjs", dest: "tern_for_vim" }
   - { name: "scrooloose", dest: "nerdtree" }
   - { name: "Raimondi", dest: "delimitMate" }
   - { name: "vim-syntastic", dest: "syntastic" }
@@ -59,6 +62,9 @@
 
 - name: start ycm setup
   script: ycm.sh 
+
+- name: start ternjs setup
+  shell: "cd ~/.vim/bundle/tern_for_vim && npm install"
 
 - name: get plugins 
   shell: ls ~/.vim/bundle
