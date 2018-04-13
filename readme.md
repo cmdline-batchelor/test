@@ -24,13 +24,14 @@
 ## plugins:
 
 Installs and configures the following plugins using pathogen, No further setup required:
-- fzf - slick fuzzy word finder
+
 - Syntastic - syntax check
-- YouCompleteMe - autocomplete, gotos
 - Vim-airline - vim status bar
 - Tagbar - function gotos/list
 - Nerdtree - treeview of files
+- fzf - slick fuzzy word finder
 - Delimitmate - closes parenthesis
+- YouCompleteMe - autocomplete, gotos
 
 ## extending:
 
