@@ -12,3 +12,4 @@ let g:NERDTreeWinSize=13
 highlight LineNr ctermfg=magenta
 autocmd vimenter * NERDTree
 autocmd vimenter * Tagbar
+let g:syntastic_yaml_checkers = ['yamllint']

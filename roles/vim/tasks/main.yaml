@@ -10,6 +10,7 @@
       - ctags
       - cmake
       - screen
+      - yamllint
       - python-devel
       - centos-release-scl-rh
     state: installed
@@ -47,27 +48,27 @@
   git:
     repo: "https://github.com/{{item.name}}/{{item.dest}}.git"
     dest: "~/.vim/bundle/{{item.dest}}"
-  with_items: 
-  - { name: "junegunn", dest: "fzf" }
-  - { name: "majutsushi", dest: "tagbar" }
-  - { name: "ternjs", dest: "tern_for_vim" }
-  - { name: "scrooloose", dest: "nerdtree" }
-  - { name: "Raimondi", dest: "delimitMate" }
-  - { name: "Valloric", dest: "YouCompleteMe" }
-  - { name: "vim-syntastic", dest: "syntastic" }
-  - { name: "vim-airline", dest: "vim-airline" }
-  - { name: "rafi", dest: "awesome-vim-colorschemes" }
+  with_items:
+    - {name: "junegunn", dest: "fzf"}
+    - {name: "majutsushi", dest: "tagbar"}
+    - {name: "ternjs", dest: "tern_for_vim"}
+    - {name: "scrooloose", dest: "nerdtree"}
+    - {name: "Raimondi", dest: "delimitMate"}
+    - {name: "Valloric", dest: "YouCompleteMe"}
+    - {name: "vim-syntastic", dest: "syntastic"}
+    - {name: "vim-airline", dest: "vim-airline"}
+    - {name: "rafi", dest: "awesome-vim-colorschemes"}
 
 - name: update vi to 8
   script: getVim8.sh
 
 - name: start ycm setup
-  script: ycm.sh 
+  script: ycm.sh
 
 - name: start ternjs setup
   shell: "cd ~/.vim/bundle/tern_for_vim && npm install"
 
-- name: get plugins 
+- name: get plugins
   shell: ls ~/.vim/bundle
   register: plugins
 
