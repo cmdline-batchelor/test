@@ -77,10 +77,10 @@ you shouldn't require further setup but for customisation checkout plugin source
 
 
 ## nerdtree, vim-airline, tagBar, youCompleteMe, syntastic in bash:
-![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/vim3.PNG)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/vim4.PNG)
 
 ## yaml:
-![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/yaml.PNG)
+![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/yaml1.PNG)
 
 ## fzf:
 ![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/fzf.PNG)
