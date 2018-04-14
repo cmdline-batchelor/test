@@ -1,9 +1,9 @@
 ---
 - name: install packages
-  become: yes 
-  yum: 
-    pkg: 
-      - epel-release 
+  become: yes
+  yum:
+    pkg:
+      - epel-release
       - git
       - curl
       - nodejs
@@ -25,19 +25,19 @@
     pkg: devtoolset-6
     state: installed
 
-- name: copy vimrc 
+- name: copy vimrc
   copy:
     src: .vimrc
     dest: ~/.vimrc
 
 - name: create plugin dirs
-  file: 
+  file:
     path: "{{item}}"
     state: directory
   with_items:
-  - ~/.vim/autoload
-  - ~/.vim/bundle
-  - ~/ycm_build 
+    - ~/.vim/autoload
+    - ~/.vim/bundle
+    - ~/ycm_build
 
 - name: copy pathogen.vim
   copy:
@@ -57,6 +57,7 @@
     - {name: "Valloric", dest: "YouCompleteMe"}
     - {name: "vim-syntastic", dest: "syntastic"}
     - {name: "vim-airline", dest: "vim-airline"}
+    - {name: "python-mode", dest: "python-mode"}
     - {name: "rafi", dest: "awesome-vim-colorschemes"}
 
 - name: update vi to 8
@@ -66,12 +67,19 @@
   script: ycm.sh
 
 - name: start ternjs setup
-  shell: "cd ~/.vim/bundle/tern_for_vim && npm install"
+  shell: >
+    cd ~/.vim/bundle/tern_for_vim
+    npm install
+
+- name: star python-mode setup
+  shell: >
+    cd ~/.vim/bundle/python-mode
+    git submodule update --init --recursive
 
 - name: get plugins
   shell: ls ~/.vim/bundle
   register: plugins
 
-- debug: 
+- debug:
     var: plugins.stdout_lines
 ...
