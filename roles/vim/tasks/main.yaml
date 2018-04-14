@@ -53,9 +53,10 @@
   - { name: "ternjs", dest: "tern_for_vim" }
   - { name: "scrooloose", dest: "nerdtree" }
   - { name: "Raimondi", dest: "delimitMate" }
+  - { name: "Valloric", dest: "YouCompleteMe" }
   - { name: "vim-syntastic", dest: "syntastic" }
   - { name: "vim-airline", dest: "vim-airline" }
-  - { name: "Valloric", dest: "YouCompleteMe" }
+  - { name: "rafi", dest: "awesome-vim-colorschemes" }
 
 - name: update vi to 8
   script: getVim8.sh

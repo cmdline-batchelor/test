@@ -34,6 +34,8 @@ Installs and configures the following plugins using pathogen, No further setup r
 - fzf - slick fuzzy word finder
 - Delimitmate - closes parenthesis
 - YouCompleteMe - autocomplete, gotos
+- tern_for_vim - js autocomplete, method show
+- vim awesome-colorschemes - awesome colourschemes
 
 ## extending:
 
@@ -65,11 +67,14 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [fzf](https://github.com/junegunn/fzfe)
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
-- [syntastic](https://github.com/vim-airline/vim-airline)
 - [pathogen](https://github.com/tpope/vim-pathogen)
-- [vim-airline](https://github.com/vim-syntastic/syntastic)
+- [syntastic](https://github.com/vim-syntastic/syntastic)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+- [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
+
 
 ## nerdtree, vim-airline, tagBar, youCompleteMe, syntastic in bash:
 ![title](https://github.com/cmdline-batchelor/vionysus/blob/master/img/vim3.PNG)
