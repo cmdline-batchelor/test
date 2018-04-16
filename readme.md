@@ -75,7 +75,6 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
-
 - [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 
 
