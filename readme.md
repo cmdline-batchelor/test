@@ -27,6 +27,7 @@
 
 Installs and configures the following plugins using pathogen, No further setup required:
 
+- pythonmode - python ide
 - Syntastic - syntax check
 - Vim-airline - vim status bar
 - Tagbar - function gotos/list
@@ -69,10 +70,12 @@ you shouldn't require further setup but for customisation checkout plugin source
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [pathogen](https://github.com/tpope/vim-pathogen)
 - [syntastic](https://github.com/vim-syntastic/syntastic)
+- [pythonmode](https://github.com//python-mode/python-mode)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim)
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+
 - [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 
 
