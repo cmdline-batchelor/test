@@ -1,4 +1,0 @@
----
-- hosts: tet
-  roles: 
-    - role: vim
