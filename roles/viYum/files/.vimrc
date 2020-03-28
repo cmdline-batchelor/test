@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+syntax on
+
 set ai
 set ruler
 set number
@@ -9,12 +11,12 @@ set showmode
 set showmatch
 set background=dark
 
-colorscheme PaperColor
+colorscheme OceanicNext
+
+highlight LineNr ctermfg=blue
 
 let g:tagbar_width=13
 let g:NERDTreeWinSize=13
-
-highlight LineNr ctermfg=blue
 
 autocmd vimenter * NERDTree
 autocmd vimenter * Tagbar

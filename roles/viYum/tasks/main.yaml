@@ -3,26 +3,22 @@
   become: yes
   yum:
     pkg:
-      - epel-release
+      - gcc-c++
+      - cmake
+      - make
+      - python3
+      - python3-devel
+      - mono-complete
+      - golang
+      - vim
       - git
       - curl
+      - npm
+      - node
       - nodejs
       - ctags
-      - cmake
       - screen
       - yamllint
-      - python-devel
-      - centos-release-scl-rh
-    state: installed
-
-- name: add repo for devtoolset-6
-  become: yes
-  shell: "yum-config-manager --enable rhel-server-rhscl-7-rpms"
-
-- name: install devtoolset-6
-  become: yes
-  yum:
-    pkg: devtoolset-6
     state: installed
 
 - name: copy vimrc
@@ -60,20 +56,19 @@
     - {name: "python-mode", dest: "python-mode"}
     - {name: "rafi", dest: "awesome-vim-colorschemes"}
 
-- name: update vi to 8
-  script: getVim8.sh
 
 - name: start ycm setup
-  script: ycm.sh
+  shell: >
+   python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 
 - name: start ternjs setup
   shell: >
-    cd ~/.vim/bundle/tern_for_vim
+    cd ~/.vim/bundle/tern_for_vim;
     npm install
 
-- name: star python-mode setup
+- name: start python-mode setup
   shell: >
-    cd ~/.vim/bundle/python-mode
+    cd ~/.vim/bundle/python-mode;
     git submodule update --init --recursive
 
 - name: get plugins
@@ -82,4 +77,3 @@
 
 - debug:
     var: plugins.stdout_lines
-...
