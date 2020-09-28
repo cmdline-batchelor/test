@@ -1,4 +1,4 @@
 ---
-- hosts: all 
+- hosts: loc 
   roles: 
-    - role: vimYum
+    - role: viYum

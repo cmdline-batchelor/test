@@ -12,7 +12,10 @@
 - install openssh `yum install -y openssh-server openssh`
 - restart sshd `sudo service sshd restart`
 - install ansible `sudo yum install -y epel-release ansible`
-- add host to ansible hosts: `sudo vi /etc/ansible/hosts`
+- add host to ansible hosts: `sudo vi /etc/ansible/hosts
+   [loc]
+   127.0.0.1`
+
 - copy keys to remote/local `ssh-copy-id -i ~/.ssh/key.pub <user>@<hostname>`
 
 
