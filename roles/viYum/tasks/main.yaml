@@ -1,137 +1,137 @@
 ---
-#- name: update yum cache
-#  yum:
-#    update_cache: yes
-#
-#- name: install packages
-#  become: yes
-#  yum:
-#    pkg:
-#      - go
-#      - git
-#      - gcc
-#      - lua
-#      - curl
-#      - perl
-#      - ruby
-#      - make
-#      - ctags
-#      - cmake
-#      - nodejs
-#      - luajit
-#      - screen
-#      - python3
-#      - yamllint
-#      - yum-utils
-#      - tcl-devel
-#      - ruby-devel
-#      - luajit-devel
-#      - epel-release
-#      - mono-complete
-#      - nodejs.x86_64
-#      - ncurses.x86_64
-#      - scl-utils.x86_64
-#      - perl-devel.x86_64
-#      - ncurses-libs.x86_64
-#      - ncurses-devel.x86_64
-#      - ncurses-c++-libs.x86_64
-#      - ncurses-term.noarch
-#      - ncurses-base.noarch
-#      - rpm-build-libs.x86_64
-#      - centos-release.x86_64
-#      - perl-ExtUtils-ParseXS
-#      - compat-lua-devel.x86_64
-#      - perl-ExtUtils-Embed.noarch
-#      - platform-python-devel.x86_64
-#      - boost169-python3-devel.x86_64
-#      - perl-ExtUtils-CBuilder.noarch
-#      - boost169-mpich-python3-devel.x86_64
-#    state: installed
-#
-#- name: copy vimrc
-#  copy:
-#    src: .vimrc
-#    dest: ~/.vimrc
-#
-#- name: create plugin dirs
-#  file:
-#    path: "{{item}}"
-#    state: directory
-#  with_items:
-#    - ~/.vim/autoload
-#    - ~/.vim/bundle
-#    - ~/ycm_build
-#
-#- name: copy pathogen.vim
-#  copy:
-#    src: pathogen.vim
-#    dest: ~/.vim/autoload
-#
-#- name: install vi plugins
-#  git:
-#    repo: "https://github.com/{{item.name}}/{{item.dest}}"
-#    dest: "~/.vim/bundle/{{item.dest}}"
-#  with_items:
-#    - {name: "junegunn", dest: "fzf"}
-#    - {name: "majutsushi", dest: "tagbar"}
-#    - {name: "ternjs", dest: "tern_for_vim"}
-#    - {name: "scrooloose", dest: "nerdtree"}
-#    - {name: "Raimondi", dest: "delimitMate"}
-#    - {name: "Valloric", dest: "YouCompleteMe"}
-#    - {name: "vim-syntastic", dest: "syntastic"}
-#    - {name: "vim-airline", dest: "vim-airline"}
-#    - {name: "python-mode", dest: "python-mode"}
-#    - {name: "rafi", dest: "awesome-vim-colorschemes"}
-#
-#- name: remove all vim except minimal (or lose sudo...)
-#  become: yes
-#  yum:
-#    pkg:
-#      - vim-common.x86_64
-#      - vim-enhanced.x86_64
-#      - vim-filesystem.noarch
-#    state: absent
-#
-#- name: get vim8
-#  git:
-#    repo: https://github.com/vim/vim.git
-#    dest: ~/vim
+- name: update yum cache
+  yum:
+    update_cache: yes
+
+- name: install packages
+  become: yes
+  yum:
+    pkg:
+      - go
+      - git
+      - gcc
+      - lua
+      - curl
+      - perl
+      - ruby
+      - make
+      - ctags
+      - cmake
+      - nodejs
+      - luajit
+      - screen
+      - python3
+      - yamllint
+      - yum-utils
+      - tcl-devel
+      - ruby-devel
+      - luajit-devel
+      - epel-release
+      - mono-complete
+      - nodejs.x86_64
+      - ncurses.x86_64
+      - scl-utils.x86_64
+      - perl-devel.x86_64
+      - ncurses-base.noarch
+      - ncurses-libs.x86_64
+      - ncurses-devel.x86_64
+      - rpm-build-libs.x86_64
+      - centos-release.x86_64
+      - perl-ExtUtils-ParseXS
+      - compat-lua-devel.x86_64
+      - ncurses-c++-libs.x86_64
+      - perl-ExtUtils-Embed.noarch
+      - platform-python-devel.x86_64
+      - boost169-python3-devel.x86_64
+      - perl-ExtUtils-CBuilder.noarch
+      - boost169-mpich-python3-devel.x86_64
+    state: installed
+
+- name: copy vimrc
+  copy:
+    src: .vimrc
+    dest: ~/.vimrc
+
+- name: create plugin dirs
+  file:
+    path: "{{item}}"
+    state: directory
+  with_items:
+    - ~/.vim/autoload
+    - ~/.vim/bundle
+    - ~/ycm_build
+
+- name: copy pathogen.vim
+  copy:
+    src: pathogen.vim
+    dest: ~/.vim/autoload
+
+- name: install vi plugins
+  git:
+    repo: "https://github.com/{{item.name}}/{{item.dest}}"
+    dest: "~/.vim/bundle/{{item.dest}}"
+  with_items:
+    - {name: "junegunn", dest: "fzf"}
+    - {name: "majutsushi", dest: "tagbar"}
+    - {name: "ternjs", dest: "tern_for_vim"}
+    - {name: "scrooloose", dest: "nerdtree"}
+    - {name: "Raimondi", dest: "delimitMate"}
+    - {name: "Valloric", dest: "YouCompleteMe"}
+    - {name: "vim-syntastic", dest: "syntastic"}
+    - {name: "vim-airline", dest: "vim-airline"}
+    - {name: "python-mode", dest: "python-mode"}
+    - {name: "rafi", dest: "awesome-vim-colorschemes"}
+
+- name: remove all vim except minimal (or lose sudo...)
+  become: yes
+  yum:
+    pkg:
+      - vim-common.x86_64
+      - vim-enhanced.x86_64
+      - vim-filesystem.noarch
+    state: absent
+
+- name: get vim8
+  git:
+    repo: https://github.com/vim/vim.git
+    dest: ~/vim
 
 - name: if vim compiled before
   command: make distclean
   args:
-    chdir: ~/vim 
+    chdir: ~/vim
 
 - name: if vim compiled before
   command: make distclean
   args:
     chdir: ~/vim/src
 
-- name: compile vim with python3
-  script: pythVim.sh
+- name: compile using python3
+  command: ./configure --enable-pythoninterp
+  args:
+    chdir: ~/vim
 
-#
-##- name: make vim8
-#  command: make
-#  args:
-#    chdir: ~/vim/src
-#
-#- name: install vim8
-#  become: yes 
-#  command: make install
-#  args:
-#    chdir: /home/dionysus/vim/src
-#
-#- name: compile ycm
-#  command: python3 install.py
-#  args:
-#    chdir: ~/.vim/bundle/YouCompleteMe 
-#
-#- name: devtoolset6 workaround 
+- name: make vim8
+  command: make
+  args:
+    chdir: ~/vim
+
+- name: install vim8
+  become: yes
+  command: make install
+  args:
+    chdir: /home/dionysus/vim
+
+- name: compile ycm
+  command: python3 install.py
+  args:
+    chdir: ~/.vim/bundle/YouCompleteMe
+
+#- name: devtoolset6 workaround
 #  become: yes
 #  yum_repository:
 #    name: centos-sclo-rh-testing
-#    state: present 
+#    state: present
 #
 #- name: disable devtoolset 6
 #  become: yes
