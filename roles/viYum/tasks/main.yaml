@@ -120,34 +120,19 @@
   args:
     chdir: ~/.vim/bundle/YouCompleteMe
 
-#- name: devtoolset6 workaround
-#  become: yes
-#  yum_repository:
-#    name: centos-sclo-rh-testing
-#    state: present
-#
-#- name: disable devtoolset 6
-#  become: yes
-#  yum_repository:
-#    name: centos-sclo-rh devtoolset-6
-#    state: absent
-#
-#- name: start ycm setup
-#  script: ycm.sh
-#
-#- name: start ternjs setup
-#  shell: >
-#    cd ~/.vim/bundle/tern_for_vim
-#    npm install
-#
-#- name: star python-mode setup
-#  shell: >
-#    cd ~/.vim/bundle/python-mode
-#    git submodule update --init --recursive
-#
-#- name: get plugins
-#  shell: ls ~/.vim/bundle
-#  register: plugins
-#
-#- debug:
-#    var: plugins.stdout_lines
+- name: start ternjs setup
+  command: npm install
+  args:
+    chdir: ~/.vim/bundle/tern_for_vim
+
+- name: star python-mode setup
+  command: git submodule update --init --recursive
+  args:
+    chdir: ~/.vim/bundle/python-mode
+
+- name: get plugins
+  shell: ls ~/.vim/bundle
+  register: plugins
+
+- debug:
+    var: plugins.stdout_lines
