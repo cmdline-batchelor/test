@@ -9,14 +9,15 @@ set showmode
 set showmatch
 set background=dark
 
-colorscheme PaperColor
+colo challenger_deep
 
 let g:tagbar_width=13
 let g:NERDTreeWinSize=13
 
-highlight LineNr ctermfg=blue
-
 autocmd vimenter * NERDTree
 autocmd vimenter * Tagbar
+
+syntax on
+highlight LineNr ctermfg=magenta
 
 let g:syntastic_yaml_checkers = ['yamllint']
