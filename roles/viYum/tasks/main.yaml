@@ -116,7 +116,7 @@
     chdir: /home/dionysus/vim
 
 - name: compile ycm
-  command: python3.6 install.py
+  command: python3 install.py
   args:
     chdir: ~/.vim/bundle/YouCompleteMe
 
